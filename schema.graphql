@@ -1,0 +1,32 @@
+type Team {
+  name: String!
+  genre: Genre!
+}
+
+enum Genre {
+  male
+  female
+}
+
+type Match {
+  homeTeam: Team!
+  homeUrl: String!
+  homePublicCount: Int!
+  homePublic: [HomePerson] @relation
+  awayTeam: String!
+  awayUrl: String!
+  awayPublicCount: Int!
+  awayPublic: [AwayPerson] @relation
+}
+
+type HomePerson {
+  name: String!
+  dni: String!
+  match: Match
+}
+
+type AwayPerson {
+  name: String!
+  dni: String!
+  match: Match
+}
