@@ -1,0 +1,18 @@
+.new-match-container {
+  min-width: 200px;
+}
+
+.new-match-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: blueviolet;
+  margin-bottom: 10px;
+}
+
+.new-match-form-container {
+  gap: 8px;
+}
+
+.new-team-homeTeam {
+}

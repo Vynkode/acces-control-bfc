@@ -30,3 +30,8 @@ type AwayPerson {
   dni: String!
   match: Match
 }
+
+type Query {
+  teams: [Team!]!
+  matches: [Match!]!
+}

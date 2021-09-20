@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
+  padding: .5em 2em;
+  background-color: #717272;
+  border-bottom: 2px solid #D81C23;
+}
+
+.navbar-child {
+text-align: center;
+  flex:1;
+}
+
+.navbar-social {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #D81C23;
+}
+
+.navbar-social--icon:hover {
+  cursor: pointer;
+  color: #E8EAE3;
+}

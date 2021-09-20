@@ -1,0 +1,30 @@
+.container-login {
+  padding: 1rem 4rem;
+  border: 1px solid red;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.header-login {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 0 0 .8em 0;
+}
+
+.input-login {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.email-login {
+}
+
+.password-login {
+}
+
+.btn-login {
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: .4em .8em;
+}
