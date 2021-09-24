@@ -20,14 +20,18 @@ library.add(fab, faArrowLeft);
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <section className='container'>
           <Navbar />
           <Switch>
             <Route path='/' exact component={Dashboard} />
             <Route path='/match/:id' exact component={Match} />
-            <Route path='/match/:id/public' component={MatchPublic} />
-            <Route path='/acceso-publico/:accessID' component={AccessPublic} />
+            <Route path='/match/:id/public' exact component={MatchPublic} />
+            <Route
+              path='/acceso-publico/:accessID'
+              exact
+              component={AccessPublic}
+            />
             <Route path='*' component={Error} />
           </Switch>
         </section>
