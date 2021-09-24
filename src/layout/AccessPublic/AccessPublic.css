@@ -1,0 +1,57 @@
+.match-access-container {
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  padding: 2rem 0;
+}
+
+.match-access-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.match-access-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.match-access-count {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--second-color);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.match-access-form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: .4em;
+}
+
+.match-access-form > input {
+  color: var(--second-color);
+  padding: 0.4em 0.8em;
+  min-width: 230px;
+}
+
+.match-access-form > input:focus-visible {
+  outline-color: var(--accent-color);
+
+}
+
+.match-access-button {
+  cursor: pointer;
+  color: var(--primary-color);
+  background-color: var(--widget-bg);
+  border: 1px solid var(--alternative-color);
+  border-radius: .5rem;
+  width: max-content;
+  margin: 0 auto;
+  padding: .4rem .8rem;
+}

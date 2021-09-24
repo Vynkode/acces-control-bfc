@@ -1,18 +1,35 @@
 .new-match-container {
+  padding: 10px 0.8rem 0 0.8rem;
   min-width: 200px;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5em;
+  background-color: var(--widget-bg);
 }
 
 .new-match-title {
+  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  background-color: blueviolet;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 
 .new-match-form-container {
-  gap: 8px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.new-team-homeTeam {
+.new-match-homeTeam {
+}
+
+.new-match-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-match-button {
+  font-weight: bold;
+  padding: 0.8em 0.2em;
 }

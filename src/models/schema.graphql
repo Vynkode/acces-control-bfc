@@ -9,6 +9,7 @@ enum Genre {
 }
 
 type Match {
+  date: Time!
   homeTeam: Team!
   homeUrl: String!
   homePublicCount: Int!
@@ -34,4 +35,7 @@ type AwayPerson {
 type Query {
   teams: [Team!]!
   matches: [Match!]!
+  matchesByDate(after: Time!): [Match!]! @resolver
+  matchByHomeUrl(homeUrl: String!): Match!
+  matchByAwayUrl(awayUrl: String!): Match!
 }

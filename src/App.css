@@ -1,7 +1,18 @@
+:root {
+  --widget-bg: #252525;
+  --primary-bg: #323232;
+  --primary-color: #cdcbd0;
+  --accent-color: #c70d3a;
+  --second-color: #c70d3a;
+  --alternative-color: #222222;
+  --primary-palette: #363842;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--primary-color);
 }
 
 .container {
@@ -9,9 +20,20 @@
   height: 100vh;
   display: grid;
   grid-template-rows: 4rem 1fr;
+  background-color: var(--primary-bg);
 }
 
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.gap-column {
+  gap: 5px;
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
 }

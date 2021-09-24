@@ -1,6 +1,17 @@
 .new-team-container {
-  position: relative;
-  max-width: 180px;
+  padding: 10px 0.8rem 0 0.8rem;
+  min-width: 200px;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5em;
+  background-color: var(--widget-bg);
+}
+
+.new-team-title {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .new-team-form {
@@ -27,4 +38,15 @@
   display: block;
   opacity: 1;
   top:-50px;
+}
+
+.new-team-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-team-button {
+  padding: .2em .8em;
+  margin-bottom: 10px;
 }

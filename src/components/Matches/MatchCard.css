@@ -1,0 +1,41 @@
+.match-card-container {
+  cursor: pointer;
+  text-decoration: none;
+  min-height: 100px;
+  min-width: 250px;
+  max-width: 300px;
+  border-radius: 0.5rem;
+  background-color: var(--widget-bg);
+  justify-content: flex-start;
+  justify-items: center;
+  align-items: center;
+  gap: 0.8em;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.match-card-container:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.match-card-date {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: right;
+}
+
+.match-card-teams {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.no-link {
+  cursor: default;
+}

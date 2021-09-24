@@ -6,7 +6,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <div className='navbar'>
+    <div className='navbar no-print'>
       <div className='navbar-child navbar-logo'>
         Logo Basquet Femení Cornellà
       </div>
