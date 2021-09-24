@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
   --widget-bg: #252525;
   --primary-bg: #323232;
@@ -9,6 +11,7 @@
 }
 
 * {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -32,6 +35,33 @@
 .gap-column {
   gap: 5px;
 }
+
+input, select {
+  color: var(--second-color);
+  padding: 0.4em 0.8em;
+  min-width: 230px;
+}
+
+input::placeholder, select::placeholder {
+  color: var(--second-color);
+  opacity: 0.7%;
+}
+
+input:focus-visible, select:focus-visible {
+  outline-color: var(--accent-color);
+}
+
+button {
+  cursor: pointer;
+  color: var(--primary-color);
+  background-color: var(--widget-bg);
+  border: 1px solid var(--alternative-color);
+  border-radius: .5rem;
+  width: max-content;
+  margin: 0 auto;
+  padding: .4rem .8rem;
+}
+
 
 @media print {
   .no-print {

@@ -47,6 +47,14 @@
 }
 
 .new-team-button {
-  padding: .2em .8em;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-bg);
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
   margin-bottom: 10px;
+}
+
+.new-team-button:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }

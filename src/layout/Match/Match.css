@@ -5,13 +5,13 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .match-return-button {
   position: absolute;
-  top: 20px;
-  left: 30%;
+  top: 15px;
+  left: 10vw;
   font-size: 1.2rem;
 }
 
@@ -23,14 +23,12 @@
 }
 
 .match-button {
-  cursor: pointer;
-  color: var(--primary-color);
-  background-color: var(--widget-bg);
-  border: 1px solid var(--alternative-color);
-  border-radius: 0.5rem;
-  width: max-content;
-  margin: 0 auto;
-  padding: 0.4rem 0.8rem;
+  border-color: var(--primary-color);
+}
+
+.match-button:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .match-row {

@@ -62,7 +62,7 @@ const Match = ({ location }) => {
         </div>
         <Link
           to={{ pathname: `/match/${match._id}/public`, state: { match } }}
-          style={{ textDecoration: 'none' }}
+          style={{ textDecoration: 'none', textAlign: 'center' }}
         >
           <button className='match-button'>Listado Acompañantes</button>
         </Link>
