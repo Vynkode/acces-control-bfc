@@ -2,16 +2,20 @@
   display: grid;
   grid-template-rows: 10rem 1fr;
   justify-content: center;
+  justify-items: center;
   gap: 1rem;
+  width: 100vw;
 }
 
 .dashboard-actions {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   gap: 0.2rem;
   padding: 0.5em 2em;
   width: 100vw;
+  flex:1;
 }
 
 .dashboard-main {
@@ -19,4 +23,5 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  width: 100vw;
 }

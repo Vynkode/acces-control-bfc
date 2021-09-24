@@ -26,7 +26,7 @@ function App() {
           <Switch>
             <Route path='/' exact component={Dashboard} />
             <Route path='/match/:id' exact component={Match} />
-            <Route path='/match/:id/public' component={MatchPublic}></Route>
+            <Route path='/match/:id/public' component={MatchPublic} />
             <Route path='/acceso-publico/:accessID' component={AccessPublic} />
             <Route path='*' component={Error} />
           </Switch>

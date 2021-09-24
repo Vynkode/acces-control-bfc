@@ -17,6 +17,7 @@
 
 .container {
   overflow: hidden;
+  position: relative;
   height: 100vh;
   display: grid;
   grid-template-rows: 4rem 1fr;

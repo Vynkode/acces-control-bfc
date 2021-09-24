@@ -1,21 +1,31 @@
 .navbar {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: .2rem;
-  padding: .5em 2em;
+  gap: 0.2rem;
+  padding: 0.5em 2em;
   background-color: var(--widget-bg);
 }
 
 .navbar-child {
-text-align: center;
-  flex:1;
+  text-align: center;
+  flex: 1;
+}
+
+.navbar-logo {
+  height: 2rem;
+}
+
+.navbar-container-logo {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: .2rem;
 }
 
 .navbar-social {
   display: flex;
   gap: 5px;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: 1.5em;
   color: var(--primary-color);
 }
