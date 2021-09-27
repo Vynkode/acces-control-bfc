@@ -3,7 +3,8 @@ import moment, { now } from 'moment';
 import { useParams, useHistory } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/react-hooks';
 
-import Error from '../../components/Error/Error';
+import Error from '../../utils/Error/Error';
+import Unavailable from '../../utils/Error/Unavailable';
 
 import './AccessPublic.css';
 
@@ -48,7 +49,7 @@ const AccessPublic = () => {
       history.push('/access-success');
     },
     onError: (error) => {
-      console.log(error);
+      <Error />;
     },
   });
 
@@ -73,7 +74,7 @@ const AccessPublic = () => {
       });
     },
     onError: (error) => {
-      console.log(error);
+      <Error />;
     },
   });
 
@@ -98,7 +99,7 @@ const AccessPublic = () => {
       });
     },
     onError: (error) => {
-      console.log(error);
+      <Error />;
     },
   });
 
@@ -109,14 +110,17 @@ const AccessPublic = () => {
   const date = matchData?.date;
   const pastDate = moment(date).isSameOrAfter(now());
 
-  if ((errorHome && errorAway) || !pastDate) {
+  if (errorHome && errorAway) {
     return <Error />;
   }
 
   const home = !!dataHome;
 
   const count = home ? matchData?.homePublicCount : matchData?.awayPublicCount;
-  console.log(home);
+
+  if (!pastDate || count < 1) {
+    return <Unavailable />;
+  }
 
   const submitPerson = (e) => {
     e.preventDefault();
