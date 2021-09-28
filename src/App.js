@@ -11,6 +11,7 @@ import Dashboard from './layout/Dashboard/Dashboard';
 import Match from './layout/Match/Match';
 import MatchPublic from './layout/Match/MatchPublic';
 import AccessPublic from './layout/AccessPublic/AccessPublic';
+import AccessSuccess from './utils/Success/AccessSuccess';
 import Error from './utils/Error/Error';
 
 import './App.css';
@@ -27,7 +28,16 @@ function App() {
             <Route path='/' exact component={Dashboard} />
             <Route path='/match/:id' exact component={Match} />
             <Route path='/match/:id/public' exact component={MatchPublic} />
-            <Route path='/acceso-publico/:accessID' component={AccessPublic} />
+            <Route
+              path='/acceso-publico/:accessID'
+              exact
+              component={AccessPublic}
+            />
+            <Route
+              path='/acceso-publico/:accessID/access-success'
+              exact
+              component={AccessSuccess}
+            />
             <Route path='*' component={Error} />
           </Switch>
         </section>

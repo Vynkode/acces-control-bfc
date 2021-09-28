@@ -46,10 +46,11 @@ const AccessPublic = () => {
     { data: dataUpdate, loading: loadingUpdate, error: errorUpdate },
   ] = useMutation(UPDATE_MATCH, {
     onCompleted: () => {
-      history.push('/access-success');
+      history.push(`/acceso-publico/${accessID}/access-success`);
     },
     onError: (error) => {
-      <Error />;
+      console.log(error);
+      return <Error />;
     },
   });
 
@@ -74,7 +75,8 @@ const AccessPublic = () => {
       });
     },
     onError: (error) => {
-      <Error />;
+      console.log(error);
+      return <Error />;
     },
   });
 
@@ -99,7 +101,8 @@ const AccessPublic = () => {
       });
     },
     onError: (error) => {
-      <Error />;
+      console.log(error);
+      return <Error />;
     },
   });
 
