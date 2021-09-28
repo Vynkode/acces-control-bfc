@@ -12,7 +12,7 @@ import Match from './layout/Match/Match';
 import MatchPublic from './layout/Match/MatchPublic';
 import AccessPublic from './layout/AccessPublic/AccessPublic';
 import AccessSuccess from './utils/Success/AccessSuccess';
-import Error from './utils/Error/Error';
+import Page404 from './utils/Error/Page404';
 
 import './App.css';
 
@@ -25,7 +25,7 @@ function App() {
         <section className='container'>
           <Navbar />
           <Switch>
-            <Route path='/' exact component={Dashboard} />
+            <Route path='/adminBFCFran' exact component={Dashboard} />
             <Route path='/match/:id' exact component={Match} />
             <Route path='/match/:id/public' exact component={MatchPublic} />
             <Route
@@ -38,7 +38,7 @@ function App() {
               exact
               component={AccessSuccess}
             />
-            <Route path='*' component={Error} />
+            <Route path='*' component={Page404} />
           </Switch>
         </section>
       </Router>
