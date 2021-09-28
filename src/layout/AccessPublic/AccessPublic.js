@@ -106,7 +106,12 @@ const AccessPublic = () => {
     },
   });
 
-  if (loadingHome || loadingAway) return <p>Loading...</p>;
+  if (loadingHome || loadingAway)
+    return (
+      <section className='match-access-container flex-column'>
+        <p>Loading...</p>
+      </section>
+    );
 
   const matchData = dataHome?.matchByHomeUrl || dataAway?.matchByAwayUrl;
 
