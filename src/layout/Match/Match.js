@@ -17,7 +17,7 @@ const Match = ({ location }) => {
   console.log(url.split('match')[0]);
   return (
     <section className='match-container'>
-      <Link to='/' className='match-return-button'>
+      <Link to='/adminBFCFran' className='match-return-button'>
         <FontAwesomeIcon icon='arrow-left' />
       </Link>
       <article className='match-wrapper'>
