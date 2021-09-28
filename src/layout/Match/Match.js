@@ -41,7 +41,7 @@ const Match = ({ location }) => {
         <div className='match-column'>
           <p>URL Local:</p>
           <p>
-            {url.split('match')[0].slice(7, -1)}acceso-publico/
+            {url.split('match')[0].replace('https://', '')}acceso-publico/
             {match.homeUrl}
           </p>
         </div>
@@ -56,7 +56,7 @@ const Match = ({ location }) => {
         <div className='match-column'>
           <p>URL Visitante:</p>
           <p>
-            {url.split('match')[0].slice(7, -1)}acceso-publico/
+            {url.split('match')[0].replace('https://', '')}acceso-publico/
             {match.awayUrl}
           </p>
         </div>
