@@ -37,14 +37,14 @@
 }
 
 input, select {
-  color: var(--second-color);
+  color: black;
   padding: 0.4em 0.8em;
   min-width: 230px;
 }
 
 input::placeholder, select::placeholder {
-  color: var(--second-color);
-  opacity: 0.7%;
+  color: var(--primary-bg);
+  opacity: 0.4;
 }
 
 input:focus-visible, select:focus-visible {

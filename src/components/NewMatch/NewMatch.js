@@ -3,7 +3,7 @@ import { useLazyQuery, useMutation, useQuery } from '@apollo/react-hooks';
 import cryptoRandomString from 'crypto-random-string';
 import moment from 'moment';
 
-import { ALL_MATCHES, NEW_MATCH } from '../../models/matchModel';
+import { ALL_MATCHES_GREATER_TODAY, NEW_MATCH } from '../../models/matchModel';
 import { TEAMS } from '../../models/teamModel';
 import './NewMatch.css';
 
@@ -21,7 +21,7 @@ const NewMatch = () => {
     { data: teamsData, loading: loadingTeams, error: errorTeams },
   ] = useLazyQuery(TEAMS);
   const [newMatch, { data, loading, error, called }] = useMutation(NEW_MATCH, {
-    refetchQueries: [{ query: ALL_MATCHES }],
+    refetchQueries: [{ query: ALL_MATCHES_GREATER_TODAY }],
   });
 
   const newTeamToggle = () => {

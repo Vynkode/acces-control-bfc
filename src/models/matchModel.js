@@ -1,6 +1,25 @@
 import gql from 'graphql-tag';
 
 // QUERIES
+export const ALL_MATCHES_GREATER_TODAY = gql`
+  query GetAllMatchesGreaterToday {
+    matchesGreaterToday {
+      _id
+      date
+      homeTeam {
+        _id
+        name
+        genre
+      }
+      homePublicCount
+      homeUrl
+      awayTeam
+      awayPublicCount
+      awayUrl
+    }
+  }
+`;
+
 export const ALL_MATCHES = gql`
   query GetAllMatches {
     matches {

@@ -35,14 +35,10 @@
 }
 
 .match-access-form > input {
-  color: var(--second-color);
   padding: 0.4em 0.8em;
   min-width: 230px;
 }
 
-.match-access-form > input:focus-visible {
-  outline-color: var(--accent-color);
-}
 
 .match-access-button {
   cursor: pointer;

@@ -36,6 +36,7 @@ type Query {
   teams: [Team!]!
   matches: [Match!]!
   matchesByDate(after: Time!): [Match!]! @resolver
+  matchesGreaterToday: [Match!]! @resolver
   matchByHomeUrl(homeUrl: String!): Match!
   matchByAwayUrl(awayUrl: String!): Match!
 }
