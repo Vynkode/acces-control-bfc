@@ -1,3 +1,11 @@
+type AdminUser {
+  name: String!
+  username: String!
+  password: String!
+  phone: Int!
+  email: String!
+}
+
 type Team {
   name: String!
   genre: Genre!

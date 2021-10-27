@@ -54,10 +54,12 @@ const MatchPublic = ({ location }) => {
         </tr>
         <tbody>
           {home &&
-            home.map((person, id) => {
+            home.map((person, i) => {
               return (
-                <tr key={id}>
-                  <td className='match-row-name'>{person.name}</td>
+                <tr key={i}>
+                  <td className='match-row-name'>
+                    {i}. {person.name}
+                  </td>
                   <td>{person.dni}</td>
                 </tr>
               );
@@ -68,10 +70,12 @@ const MatchPublic = ({ location }) => {
         </tr>
         <tbody>
           {away &&
-            away.map((person) => {
+            away.map((person, j) => {
               return (
-                <tr>
-                  <td className='match-row-name'>{person.name}</td>
+                <tr key={j}>
+                  <td className='match-row-name'>
+                    {j}. {person.name}
+                  </td>
                   <td>{person.dni}</td>
                 </tr>
               );
