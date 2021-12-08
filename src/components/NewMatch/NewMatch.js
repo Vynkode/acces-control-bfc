@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useLazyQuery, useMutation, useQuery } from '@apollo/react-hooks';
+import React, { useRef, useState } from 'react';
+import { useLazyQuery, useMutation } from '@apollo/react-hooks';
 import cryptoRandomString from 'crypto-random-string';
 import moment from 'moment';
 

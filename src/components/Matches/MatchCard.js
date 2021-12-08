@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import 'moment/locale/es';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 // STYLES
 import './MatchCard.css';

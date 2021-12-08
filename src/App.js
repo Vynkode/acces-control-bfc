@@ -1,6 +1,6 @@
 import { ApolloProvider } from '@apollo/client';
 import { client } from './models/client';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -24,22 +24,20 @@ function App() {
       <Router basename={process.env.PUBLIC_URL}>
         <section className='container'>
           <Navbar />
-          <Switch>
-            <Route path='/adminBFCFran' exact component={Dashboard} />
-            <Route path='/match/:id' exact component={Match} />
-            <Route path='/match/:id/public' exact component={MatchPublic} />
+          <Routes>
+            <Route path='/adminBFCFran' element={<Dashboard />} />
+            <Route path='/match/:id' element={<Match />} />
+            <Route path='/match/:id/public' element={<MatchPublic />} />
             <Route
               path='/acceso-publico/:accessID'
-              exact
-              component={AccessPublic}
+              element={<AccessPublic />}
             />
             <Route
               path='/acceso-publico/:accessID/access-success'
-              exact
-              component={AccessSuccess}
+              element={<AccessSuccess />}
             />
-            <Route path='*' component={Page404} />
-          </Switch>
+            <Route path='*' element={<Page404 />} />
+          </Routes>
         </section>
       </Router>
     </ApolloProvider>

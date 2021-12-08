@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { Link } from 'react-router-dom';
 
@@ -13,10 +13,6 @@ import { ALL_MATCHES_GREATER_TODAY } from '../../models/matchModel';
 
 const Matches = () => {
   const { data, loading, error } = useQuery(ALL_MATCHES_GREATER_TODAY);
-
-  // useEffect(() => {
-  //   console.log('data changed');
-  // }, [data]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;

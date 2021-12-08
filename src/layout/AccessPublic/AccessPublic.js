@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import moment, { now } from 'moment';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/react-hooks';
 
 import Error from '../../utils/Error/Error';
@@ -20,7 +20,7 @@ import {
 import MatchCard from '../../components/Matches/MatchCard';
 
 const AccessPublic = () => {
-  let history = useHistory();
+  let navigate = useNavigate();
   const { accessID } = useParams();
   const personName = useRef();
   const personDni = useRef();
@@ -46,7 +46,7 @@ const AccessPublic = () => {
     { data: dataUpdate, loading: loadingUpdate, error: errorUpdate },
   ] = useMutation(UPDATE_MATCH, {
     onCompleted: () => {
-      history.push(`/acceso-publico/${accessID}/access-success`);
+      navigate(`/acceso-publico/${accessID}/access-success`);
     },
     onError: (error) => {
       console.log(error);
